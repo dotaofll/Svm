@@ -48,6 +48,7 @@ The optimization problem then simply requires that we maximize $| | \mathbf{w}| 
 $$
 t_{n}\left(\mathbf{w}^{\mathrm{T}} \boldsymbol{\phi}\left(\mathbf{x}_{n}\right)+b\right) \geqslant 1, \quad n=1, \ldots, N (1-7)
 $$
+<a href="https://www.codecogs.com/eqnedit.php?latex=\fn_cm&space;$$&space;t_{n}\left(\mathbf{w}^{\mathrm{T}}&space;\boldsymbol{\phi}\left(\mathbf{x}_{n}\right)&plus;b\right)&space;\geqslant&space;1,&space;\quad&space;n=1,&space;\ldots,&space;N&space;(1-7)&space;$$" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\fn_cm&space;$$&space;t_{n}\left(\mathbf{w}^{\mathrm{T}}&space;\boldsymbol{\phi}\left(\mathbf{x}_{n}\right)&plus;b\right)&space;\geqslant&space;1,&space;\quad&space;n=1,&space;\ldots,&space;N&space;(1-7)&space;$$" title="$$ t_{n}\left(\mathbf{w}^{\mathrm{T}} \boldsymbol{\phi}\left(\mathbf{x}_{n}\right)+b\right) \geqslant 1, \quad n=1, \ldots, N (1-7) $$" /></a>
 
 so until now the problem has changed.
 
