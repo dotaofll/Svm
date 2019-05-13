@@ -1,8 +1,8 @@
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
-
 # Introduce SVM
 
 Consider a two-class classfication problem using linear models of the form
+
+![](http://chart.googleapis.com/chart?cht=tx&chl= y(\mathbf{x})=\mathbf{w}^{\mathrm{T}} \boldsymbol{\phi}(\mathbf{x})+b (1-1))
 
 
 $$
