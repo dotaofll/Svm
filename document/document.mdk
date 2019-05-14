@@ -4,16 +4,6 @@ Logo          : Yuzhe Liu
 
 [TITLE]
 
-# Madoko 
-
-Madoko is a fast markdown processor for writing professional articles
-with a focus on simplicity and plain text readability.
-
-* Read the [reference manual].
-* Explore the upper-right toolbox menu to discover how Markdown works. 
-* `Alt-Q` reformats the current paragraph.
-
-Enjoy!
 
 [reference manual]: http://research.microsoft.com/en-us/um/people/daan/madoko/doc/reference.html  "Madoko reference manual"
 
@@ -98,3 +88,51 @@ Here is the equivalent constraint optimization problem:
 $$
 \begin{array}{l}{\min f\left(x_{1}, x_{2}, \ldots, x_{n}\right)} \\ {\text {s.t.h}_{k}\left(x_{1}, x_{2}, \ldots, x_{n}\right)=0}\end{array}
 $$
+
+
+Define the equation below:
+
+$$
+L(x,\lambda) = f(x) + \sum_{j=1}^{m} \lambda_{j} h_{k}(\mathbf{x})
+$$
+
+function $L(x,\lambda)$ is called the Lagrangian multiplier and the parameter $\lambda$ is called the multiplier.Do a partial derivative to the equation and we can get a simultaneous equations:
+
+$$
+\left\{\begin{array}{l}{\frac{\partial L}{\partial x_{i}}=0(i=1,2, \cdots, n)} \\ {\frac{\partial L}{\partial \lambda_{k}}=0(j=1,2, \cdots, m)}\end{array}\right.
+$$
+
+The obtained solution is a possible extreme point. Since we use the necessary conditions, whether it is an extreme point or not needs to be tested according to the specific conditions of the problem itself. This equation group is called the extreme value requirement of the equality constraint.
+
+Let`s come back to the example that mentioned above.When we convert a inequality constraint to a equality constraint,we can use Lagrangian function the solve this.
+
+$$
+L\left(x, a_{1}, b_{1}, \mu_{1}, \mu_{2}\right)=f(x)+\mu_{1}\left(a-x+a_{1}^{2}\right)+\mu_{2}\left(x-b+b_{1}^{2}\right)
+$$
+
+We then solve the problem by the equality constraint optimization problem (extreme value necessary condition), simultaneous equation:
+
+$$
+\left\{\begin{array}{l}{\frac{\partial F}{\partial x}=\frac{\partial f}{\partial x}+\mu_{1} \frac{d g_{1}}{d x}+\mu_{2} \frac{d g_{2}}{d x}=\frac{d f}{d x}-\mu_{1}+\mu_{2}=0} \\ {\frac{\partial F}{\partial \mu_{1}}=g_{1}+a_{1}^{2}=0, \quad \frac{\partial F}{\partial \mu_{2}}=g_{2}+b_{1}^{2}=0} \\ {\frac{\partial F}{\partial a_{1}}=2 \mu_{1} a_{1}=0, \quad \frac{\partial F}{\partial b_{1}}=2 \mu_{2} b_{1}=0} \\ {\mu_{1} \geq 0, \quad \mu_{2} \geq 0}\end{array}\right.
+$$
+
+Thus, the equations (extremely necessary) are converted into:
+
+$$
+\left\{\begin{array}{l}{\frac{d f}{d x}+\mu_{1} \frac{d g_{1}}{d x}+\mu_{2} \frac{d g_{2}}{d x}=0} \\ {\mu_{1} g_{1}(x)=0, \mu_{2} g_{2}(x)=0} \\ {\mu_{1} \geq 0, \mu_{2} \geq 0}\end{array}\right.
+$$
+
+This is a one-time situation. Similarly, for multiple multiple inequality constraints
+
+$$
+\begin{array}{l}{\min f(\mathbf{x})} \\ {\text {s.t.} g_{j}(\mathbf{x}) \leq 0(j=1,2, \cdots, m)}\end{array}
+$$
+
+and we have
+
+$$
+\left\{\begin{array}{l}{\frac{\partial f\left(x^{*}\right)}{\partial x_{i}}+\sum_{j=1}^{m} \mu_{j} \frac{\partial g_{j}\left(x^{*}\right)}{\partial x_{i}}=0(i=1,2, \ldots, n)} \\ {\mu_{j} g_{j}\left(x^{*}\right)=0(j=1,2, \ldots, m)} \\ {\mu_{j} \geq 0(j=1,2, \ldots, m)}\end{array}\right.
+$$
+
+That is so called KKT condition.
+
