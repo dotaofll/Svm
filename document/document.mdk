@@ -14,10 +14,10 @@ Logo          : Yuzhe Liu
 Consider a two-class classfication problem using linear models of the form
 
 $$
-y(\mathbf{x})=\omega^{T} f(\mathbf{x})+b(1-1)
+y(\mathbf{x})=\omega^{T} \boldsymbol{\phi}(\mathbf{x})+b(1-1)
 $$
 
-function $f$ denotes a fixed feature space transformation.In the form `(1-1)` $\omega=\left(\omega_{1} ; \omega_{2} ; \ldots ; \omega_{d} ;\right)$ is the normal vector which decides the direction of the hyperplane. $b$ is the bias which defines the distance between the origin and the hyperplane.
+function $\boldsymbol{\phi}$ denotes a fixed feature space transformation.In the form `(1-1)` $\omega=\left(\omega_{1} ; \omega_{2} ; \ldots ; \omega_{d} ;\right)$ is the normal vector which decides the direction of the hyperplane. $b$ is the bias which defines the distance between the origin and the hyperplane.
 
 The training dataset `D` comprises N input vectors $x=\left(x_{1} ; x_{2} ; \ldots ; x_{d} ;\right)$  with corresponding target values $r=\left(r_{1} ; r_{2} ; \ldots ; r_{m}\right)$ where $r_{n} \in\{-1,1\}$. And new data points $x$ are classified according to the sign of $y(\mathbf{x})$.
 
@@ -136,3 +136,19 @@ $$
 
 That is so called KKT condition.
 
+Let`s come back to our goal.Using svm to divide a dataset we must optimize this:
+
+$$
+arg \min _{\omega, b} \frac{1}{2}\|\omega\|^{2}, s . t . y\left(\omega^{T} \boldsymbol{\phi}(\mathbf{x})+b\right) \geq 1
+$$
+
+When we use the Lagrangian multiplier to solve the form that given above,we can get this:
+
+$$
+L(\omega, b, \alpha)=\frac{1}{2}\|\omega\|^{2}+\sum_{i=1}^{m} \alpha_{i}\left(1-y\left(\omega^{T} \boldsymbol{\phi}(\mathbf{x})+b\right)\right)
+$$
+
+in this form $\alpha_{i} \geq 0$ and KKT condition guarantees it.
+
+Until now we know what the svm is and how does it works.But we do not know how compute it because there are too many parameters.
+Next section i will show you how to convert this form to a dual problem which can be computed and understanded.
