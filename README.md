@@ -1,6 +1,9 @@
 Consider a two-class classfication problem using linear models of the form
 
+![](http://latex.codecogs.com/gif.latex?\\frac{1}{1+sin(x)})
+
 ![](http://latex.codecogs.com/gif.latex?\\y(\mathbf{x})=\omega^{T} \boldsymbol{\phi}(\mathbf{x})+b(1-1))
+ 
 $$
 y(\mathbf{x})=\omega^{T} \boldsymbol{\phi}(\mathbf{x})+b(1-1)
 $$
