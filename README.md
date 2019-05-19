@@ -1,14 +1,3 @@
-Title         : Introduction of support vector machine
-Author        : __xxlucas__
-Logo          : Yuzhe Liu
-
-[TITLE]
-
-
-[reference manual]: http://research.microsoft.com/en-us/um/people/daan/madoko/doc/reference.html  "Madoko reference manual"
-
-
-
 Consider a two-class classfication problem using linear models of the form
 
 $$
