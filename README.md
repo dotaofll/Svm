@@ -6,8 +6,6 @@ description: A slide for the paper that given below
 
 ## Sequence to Sequence Learning with Neural Networks
 
-[https://papers.nips.cc/paper/5346-sequence-to-sequence-learning-with-neural-networks.pdf](https://papers.nips.cc/paper/5346-sequence-to-sequence-learning-with-neural-networks.pdf)
-
 ### Introduction
 
 * **Background-info:** Given a large labeled training sets,Deep Neural NetWorks\(DNNs\) can not be used to map sequences to sequences\(STS\).
